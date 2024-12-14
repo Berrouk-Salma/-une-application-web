@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>application by card</title>
+</head>
+<body>
+    <div class="p-30  h-screen container mx-auto">
+        <h1 class="text-4xl font-bold text-center  dark:text-blue-500 font-serif mt-6 mb-6 text-[#1d4ed8] "> 
+            Welcome to We Create Card Invitation
+        </h1>
+        <div>
+            <button  id="openpup"class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
+                Create new Card invitation
+            </button>
+           </div>
+       <div class=" flex justify-center">
+        <img src="./images/Home-background.jpg" alt="" srcset="" class="w-2/3 p-30 ">
+       </div>
+      
+    </div>
+    <div class="popup-overlay" id="popupOverlay">
+
+        <div class="popup" id="popup">
+    
+            <span class="close" id="closePopup">&times;</span>
+    
+            <div class="popup-content">
+    
+                <p>Welcome to our website!</p>
+    
+                <p>Sign up to receive exclusive offers:</p>
+    
+                <input type="email" placeholder="Your email" id="emailInput">
+    
+                <button onclick="submitForm()">Sign Up</button>
+    
+            </div>
+    
+        </div>
+    
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>
