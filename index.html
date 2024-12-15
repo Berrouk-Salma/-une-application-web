@@ -19,29 +19,175 @@
        <div class=" flex justify-center">
         <img src="./images/Home-background.jpg" alt="" srcset="" class="w-2/3 p-30 ">
        </div>
-      
-    </div>
-    <div class="popup-overlay" id="popupOverlay">
+       <div
+       id="popupOverlay"
+       class="bg-[#D9D9D9] bg-opacity-90 overlay-container overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-ful"
+     >
+       <div class="popup-box">
+         <h1 style="color: green">Personalize Your Card Here</h1>
+         <div class="popup-content flex justify-center">
+           <form
+             class="w-full max-w-lg bg-white shadow-md rounded-lg px-8 py-6"
+           >
+             
 
-        <div class="popup" id="popup">
-    
-            <span class="close" id="closePopup">&times;</span>
-    
-            <div class="popup-content">
-    
-                <p>Welcome to our website!</p>
-    
-                <p>Sign up to receive exclusive offers:</p>
-    
-                <input type="email" placeholder="Your email" id="emailInput">
-    
-                <button onclick="submitForm()">Sign Up</button>
-    
-            </div>
-    
-        </div>
-    
+             <!-- Full Name -->
+             <div class="mb-4">
+               <label
+                 for="fullName"
+                 class="block text-gray-700 font-medium mb-2"
+                 >Full Name</label
+               >
+               <input
+                 type="text"
+                 id="fullName"
+                 name="fullName"
+                 placeholder="Your Full Name"
+                 class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+               />
+             </div>
+
+             <!-- Title -->
+             <div class="mb-4">
+               <label for="title" class="block text-gray-700 font-medium mb-2"
+                 >Title</label
+               >
+               <input
+                 type="text"
+                 id="title"
+                 name="title"
+                 placeholder="Invitation Title"
+                 class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+               />
+             </div>
+
+             <!-- Card Invitation Type -->
+             <div class="mb-4">
+               <label
+                 for="invitationType"
+                 class="block text-gray-700 font-medium mb-2"
+                 >Card Invitation Type</label
+               >
+               <select
+                 id="invitationType"
+                 name="invitationType"
+                 class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+               >
+                 <option value="wedding">Wedding</option>
+                 <option value="birthday">Birthday</option>
+                 <option value="corporate">Corporate</option>
+                 <option value="other">Other</option>
+               </select>
+             </div>
+
+             <!-- Background Image -->
+             <div class="mb-4">
+               <label
+                 for="backgroundImage"
+                 class="block text-gray-700 font-medium mb-2"
+                 >Background Image</label
+               >
+               <input
+                 type="file"
+                 id="backgroundImage"
+                 name="backgroundImage"
+                 class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+               />
+             </div>
+
+             <!-- Organizer Profile Image -->
+             <div class="mb-4">
+               <label
+                 for="organizerImage"
+                 class="block text-gray-700 font-medium mb-2"
+                 >Organizer Profile Image</label
+               >
+               <input
+                 type="file"
+                 id="organizerImage"
+                 name="organizerImage"
+                 class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+               />
+             </div>
+
+             <!-- Invitation Date -->
+             <div class="mb-4">
+               <label
+                 for="invitationDate"
+                 class="block text-gray-700 font-medium mb-2"
+                 >Invitation Date</label
+               >
+               <input
+                 type="date"
+                 id="invitationDate"
+                 name="invitationDate"
+                 class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+               />
+             </div>
+
+             <!-- Description -->
+             <div class="mb-4">
+               <label
+                 for="description"
+                 class="block text-gray-700 font-medium mb-2"
+                 >Description</label
+               >
+               <textarea
+                 id="description"
+                 name="description"
+                 rows="4"
+                 placeholder="Write your description here..."
+                 class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+               ></textarea>
+             </div>
+
+             <!-- Additional Information -->
+             <div class="mb-4">
+               <label
+                 for="additionalInfo"
+                 class="block text-gray-700 font-medium mb-2"
+                 >Additional Information</label
+               >
+               <textarea
+                 id="additionalInfo"
+                 name="additionalInfo"
+                 rows="4"
+                 placeholder="Write any additional information..."
+                 class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+               ></textarea>
+             </div>
+
+             <!-- Submit Button -->
+             <div class="flex justify-center">
+               <button
+                 type="submit"
+                 class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-6 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+               >
+                 Submit
+               </button>
+             </div>
+           </form>
+           <div class="card-invitation">
+             <div id="invitationCard" class="w-full max-w-md bg-white shadow-lg rounded-lg ">
+             <div class="p-6">
+               <h2 id="cardTitle" class="text-2xl font-bold text-blue-600 mb-4">Invitation Title</h2>
+               <p id="cardName" class="text-lg text-gray-700 mb-2">By: Full Name</p>
+               <p id="cardDate" class="text-sm text-gray-600 mb-4">Date: Invitation Date</p>
+               <p id="cardDescription" class="text-gray-700">Description will appear here...</p>
+               <p id="cardAddition" class="text-gray-700">addition will appear here...</p>
+             </div>
+             <button class="btn-close-popup" onclick="togglePopup()">Close</button>
+           </div>
+         </div>
+         <!-- <button class="btn-submit" type="submit">Submit</button> -->
+         
+       </div>
+     </div>
+     <!-- <div calss="inc-cards"></div> -->
+   </div>
     </div>
+   
+      <!-- <div calss="inc-cards"></div> -->
     <script src="./main.js"></script>
 </body>
 </html>
