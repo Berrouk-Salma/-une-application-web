@@ -125,6 +125,7 @@
                />
              </div>
 
+
              <!-- Description -->
              <div class="mb-4">
                <label
@@ -168,24 +169,33 @@
              </div>
            </form>
            <div class="card-invitation">
-             <div id="invitationCard" class="w-full max-w-md bg-white shadow-lg rounded-lg ">
-             <div class="p-6">
-               <h2 id="cardTitle" class="text-2xl font-bold text-blue-600 mb-4">Invitation Title</h2>
-               <p id="cardName" class="text-lg text-gray-700 mb-2">By: Full Name</p>
-               <p id="cardDate" class="text-sm text-gray-600 mb-4">Date: Invitation Date</p>
-               <p id="cardDescription" class="text-gray-700">Description will appear here...</p>
-               <p id="cardAddition" class="text-gray-700">addition will appear here...</p>
-             </div>
-             <button class="btn-close-popup" onclick="togglePopup()">Close</button>
-           </div>
-         </div>
-         <!-- <button class="btn-submit" type="submit">Submit</button> -->
+            <div id="invitationCard" class="w-full max-w-md rounded-lg overflow-hidden">
+              <!-- Background container -->
+              <div id="cardBackground" class="relative bg-cover bg-center w-full min-h-[400px]">
+                <!-- Profile image container -->
+                <div class="absolute top-4 right-4">
+                  <img id="cardOrganizerImage" class="w-20 h-20 rounded-full object-cover border-2 border-white" alt="Organizer">
+                </div>
+                
+                <!-- Card content with semi-transparent overlay -->
+                <div class="p-6 bg-white/90 h-full">
+                  <h2 id="cardTitle" class="text-2xl font-bold text-blue-600 mb-4">Invitation Title</h2>
+                  <p id="cardName" class="text-lg text-gray-700 mb-2">By: Full Name</p>
+                  <p id="cardDate" class="text-sm text-gray-600 mb-4">Date: Invitation Date</p>
+                  <p id="cardDescription" class="text-gray-700 mb-4">Description will appear here...</p>
+                  <p id="cardAddition" class="text-gray-700">Additional information will appear here...</p>
+                </div>
+              </div>
+            </div>
+            <button id="btn_close_popup" class="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">Close</button>
+          </div>
          
        </div>
      </div>
      <!-- <div calss="inc-cards"></div> -->
    </div>
     </div>
+   
    
       <!-- <div calss="inc-cards"></div> -->
     <script src="./main.js"></script>

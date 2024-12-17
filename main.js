@@ -12,6 +12,35 @@ var additionalInfo=document.getElementById('additionalInfo')
 var cardAddition=document.getElementById('cardAddition')
 var cardDate=document.getElementById('cardDate')
 var invitationDate=document.getElementById('invitationDate')
+const backgroundImageInput = document.getElementById('backgroundImage');
+const organizerImageInput = document.getElementById('organizerImage');
+const cardBackground = document.getElementById('cardBackground'); 
+const cardOrganizerImage = document.getElementById('cardOrganizerImage');
+
+
+backgroundImageInput.addEventListener('change', function(event) {
+    const file = event.target.files[0];
+    if (file) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            cardBackground.style.backgroundImage = `url(${e.target.result})`;
+          
+        };
+        reader.readAsDataURL(file);
+    }
+});
+
+
+organizerImageInput.addEventListener('change', function(event) {
+    const file = event.target.files[0];
+    if (file) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            cardOrganizerImage.src = e.target.result;
+        };
+        reader.readAsDataURL(file);
+    }
+});
 
 
 
